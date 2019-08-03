@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// 1 task
+
+		/*	var someArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+			
+			var oddNumbers = function odd(arr) {
+				var newArr = [];
+
+				for(i = 0 ; i < arr.length ; i++) {
+					if( arr[i]%2 === 0 ) {
+						newArr.push(arr[i]);
+					}
+				}
+
+				return newArr;
+			}
+
+			console.log(oddNumbers(someArr));*/
+
+
+			// 2 task
+	/*
+			var evenNumbers = function even(arr) {
+				var newArr = [];
+
+				for(i = 0 ; i < arr.length ; i++) {
+					if( arr[i]%2 === 1 ) {
+						newArr.push(arr[i]);
+					}
+				}
+
+				return newArr;
+			}
+
+			
+			console.log(evenNumbers(someArr));*/
+
+
+			// 3 task
+
+		/*	var someString = 1551;
+
+			var palindrome = function isPalindrome(str) {
+				if(typeof str !== 'string'){
+					str = String(str);
+				}
+
+				var arr = str.split([]);
+				var newArr = [];
+
+				for(var i = 0 ; i < arr.length; i++){
+					newArr.push(arr[i]);
+				}
+
+				newArr = newArr.reverse();
+
+				for(j = 0 ; j < newArr.length ; j++) {
+					if(newArr[j] !== arr[j]){
+						return false;
+					}
+				}
+
+				return true;
+				
+			}
+
+			console.log(palindrome(someString));*/
+
+
+			// 4 task 
+	/*
+			var arr = [7,2,3, 
+						[4,5,6, 
+							[7,8,9, 
+								[54,54, 
+									[24, 34]]]],13 , 14 ];
+
+			var sumArr = function flat(array) {
+
+				var result = [];
+				
+				arr.forEach(function concatArray(item){
+					if(Array.isArray(item)){
+						return item.forEach(concatArray)
+					}
+
+					return result.push(item)
+				})
+
+
+				
+
+				return result
+			}
+
+			console.log(sumArr(arr));*/
+
+
+			// 5 task difficult palindrome
+
+			var someNumber = 97;
+
+			var isPalindrome = function pulindrome(number , step){
+
+				step = step || 1;
+					
+				newNumber = +String(number).split([]).reverse().join([]);
+		
+				var result  = number + newNumber
+
+				newResult = +String(result).split([]).reverse().join([]);
+
+				if(newResult !== result) {
+					
+					return pulindrome(result, step + 1 );
+				} 
+
+				return 'полиндром на ' + step + ' шаге, это число ' + result;
+			}
+			
+			console.log(isPalindrome(someNumber));
+
+		
+
+		</script>
+		
+	</body>
+</html>
